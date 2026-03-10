@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Selamat Ulang Tahun</title>
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+                text-align: center;
+                color: white;
+            }
+
+            /* container utama */
+            .container {
+                padding: 20px;
+            }
+
+            /* judul */
+            h1 {
+                font-size: 32px;
+                animation: muncul 2s ease;
+            }
+
+            /* foto */
+            .foto {
+                width: 200px;
+                border-radius: 20px;
+                margin: 20px auto;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                animation: muncul 3s ease;
+            }
+
+            /* tombol */
+            button {
+                padding: 12px 25px;
+                border: none;
+                border-radius: 12px;
+                font-size: 16px;
+                background: #ff4b5c;
+                color: white;
+                margin-top: 15px;
+            }
+
+            /* animasi muncul */
+            @keyframes muncul {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* ===== KUE ULANG TAHUN ===== */
+
+            .cake {
+                position: relative;
+                margin: 40px auto;
+                width: 150px;
+                height: 120px;
+            }
+
+            .layer {
+                width: 150px;
+                height: 40px;
+                background: #ff6b81;
+                border-radius: 10px;
+                position: absolute;
+                bottom: 0;
+            }
+
+            .layer2 {
+                bottom: 35px;
+                width: 120px;
+                left: 15px;
+                background: #ff8fa3;
+            }
+
+            .layer3 {
+                bottom: 70px;
+                width: 90px;
+                left: 30px;
+                background: #ffc2d1;
+            }
+
+            /* lilin */
+
+            .candle {
+                width: 10px;
+                height: 30px;
+                background: white;
+                position: absolute;
+                bottom: 100px;
+                left: 70px;
+                border-radius: 3px;
+            }
+
+            .flame {
+                width: 12px;
+                height: 12px;
+                background: orange;
+                border-radius: 50%;
+                position: absolute;
+                top: -10px;
+                left: -1px;
+                animation: api 0.8s infinite alternate;
+            }
+
+            /* animasi api */
+
+            @keyframes api {
+                from {
+                    transform: scale(1);
+                }
+                to {
+                    transform: scale(1.3);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>🎉 Selamat Ulang Tahun ka🎂</h1>
+
+            <p>
+                Semoga panjang umur, sehat selalu,diberkahkan hidupnya
+                💖
+            </p>
+
+            <img src="kairma.jpg" class="foto" />
+
+            <!-- KUE ULANG TAHUN -->
+
+            <div class="cake">
+                <div class="layer"></div>
+                <div class="layer layer2"></div>
+                <div class="layer layer3"></div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+            </div>
+
+            <button onclick="playMusic()">Putar Lagu 🎵</button>
+
+            <audio id="musik">
+                <source src="saavane-happy-birthday-254480.mp3" type="audio/mpeg" />
+            </audio>
+        </div>
+
+        <script>
+            function playMusic() {
+                document.getElementById("musik").play();
+            }
+        </script>
+    </body>
+</html>
